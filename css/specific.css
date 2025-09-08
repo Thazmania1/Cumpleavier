@@ -1,0 +1,36 @@
+/* Utility class. */
+.visibleBorders
+{
+    border: 1px solid red;
+}
+.visibleBorders *
+{
+    border: 1px solid red;
+}
+
+/* Diagonally moving dark space background, similar to the Canva flier. */
+.spaceBackground
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/images/body_background.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+    background-size: auto;
+    animation: scrollSpace 60s linear infinite;
+    z-index: -1;
+}
+@keyframes scrollSpace
+{
+    from
+    {
+        background-position: 0 0;
+    }
+    to
+    {
+        background-position: 740px 740px;
+    }
+}
