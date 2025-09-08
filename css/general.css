@@ -7,3 +7,57 @@ h1, h2, h3, h4, h5, h6
 {
     text-align: center;
 }
+
+main
+{
+    width: 80%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+
+    text-align: justify;
+}
+
+/* Navigation menu styles. */
+nav
+{
+    position: fixed;
+    right: 5px;
+    top: 20px;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    text-align: center;
+    font-size: small;
+
+    max-width: 75px;
+}
+nav a
+{
+    text-decoration: none;
+    color: white;
+
+    transition: 0.1s scale;
+}
+nav a:hover
+{
+    scale: 1.1;
+}
+nav figure
+{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav img
+{
+    width: 20px;
+    height: auto;
+}
