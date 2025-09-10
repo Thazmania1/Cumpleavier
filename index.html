@@ -29,7 +29,7 @@
         {
             height: 75%;
             width: 75%;
-            background-image: url("assets/images/home/xaviHeroVertical.jpeg");
+            background-image: url("assets/multimedia/home/xaviHeroVertical.jpeg");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -79,9 +79,55 @@
             background-color: yellow;
         }
 
+        /* Epic fucking button for seemingly no reason. (ChatGPT'd the fuck out of this.) */
         #changeButton
         {
-
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #4facfe, #00f2fe, #7b2ff7, #f107a3);
+            background-size: 400% 400%;
+            box-shadow: 0 0 25px rgba(120, 90, 255, 0.8), 0 0 60px rgba(0, 200, 255, 0.6);
+            text-decoration: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, 0.3s box-shadow;
+            animation: galaxyShift 10s ease infinite;
+            text-align: center;
+            margin: 25px 0;
+        }
+        #changeButton:hover 
+        {
+            transform: scale(1.1);
+            box-shadow: 0 0 40px rgba(255, 0, 150, 1), 0 0 80px rgba(0, 200, 255, 0.8);
+        }
+        #changeButton::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background-image: radial-gradient(white 2px, transparent 2px);
+            background-size: 40px 40px;
+            opacity: 0.3;
+            animation: starDrift 30s linear infinite;
+        }
+        @keyframes galaxyShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes starDrift {
+            from { transform: translate(0, 0); }
+            to { transform: translate(50px, 50px); }
         }
     </style>
 </head>
@@ -92,32 +138,32 @@
     <nav>
         <a href="./index.html">
             <figure>
-                    <img src="assets/images/navigation/home_icon.png" alt="Inicio">
+                    <img src="assets/multimedia/navigation/home_icon.png" alt="Inicio">
                     <figcaption>Inicio</figcaption>
             </figure>
         </a>
         <a href="./about.html">
             <figure>
-                <img src="assets/images/navigation/book_icon.png" alt="Sobre MÍ">
+                <img src="assets/multimedia/navigation/book_icon.png" alt="Sobre MÍ">
                 <figcaption>Sobre MÍ</figcaption>
             </figure>
         </a>
         <a href="./social.html">
             <figure>
-                <img src="assets/images/navigation/tiktok_logo.png" alt="Redes sociales">
+                <img src="assets/multimedia/navigation/tiktok_logo.png" alt="Redes sociales">
                 <figcaption>Redes sociales</figcaption>
             </figure>
         </a>
         <a href="./contacts.html">
             <figure>
-                <img src="assets/images/navigation/phone_icon.png" alt="Contactos">
+                <img src="assets/multimedia/navigation/phone_icon.png" alt="Contactos">
                 <figcaption>Contactos</figcaption>
             </figure>
         </a>
     </nav>
 
     <!-- Hero section. -->
-    <div id="heroFlexbox" class="">
+    <div id="heroFlexbox">
         <div id="heroImage">
             <p>Xavi Bernés</p>
             <p>Entrenador físico</p>
@@ -127,8 +173,11 @@
         </div>
     </div>
 
-    <main class="">
-        <p>Soy <i>Xavi Bernés</i>, tengo años de experiencía y conocimiento en salud y bienestar.</p>
+    <main>
+        <p>Nostrud voluptate ad deserunt consectetur et occaecat aliqua mollit laborum do aliqua.</p>
+        <p>Ullamco cillum aliqua Lorem enim.</p>
+        <p>Aute mollit eu in laborum excepteur ad reprehenderit ea consectetur in labore nostrud.</p>
+        <p>Nisi exercitation eiusmod Lorem ex sint voluptate laboris ad.</p>
 
         <a href="./infoGather.html" id="changeButton">
             El cambio comienza hoy

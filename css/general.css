@@ -1,16 +1,19 @@
 body
 {
     margin: 0;
+    color: white;
 }
 
 h1, h2, h3, h4, h5, h6
 {
     text-align: center;
+    margin: 25px 25px;
 }
 
 main
 {
     width: 80%;
+    margin-bottom: 5px;
     
     display: flex;
     flex-direction: column;
@@ -19,13 +22,34 @@ main
 
     text-align: justify;
 }
+main p
+{
+    margin: 8px;
+}
+main img
+{
+    width: 90%;
+    height: auto;
+    margin: 25px 0;
+}
+
+video
+{
+    width: 90%;
+    height: auto;
+
+    margin: 25px 0;
+
+    border: 1px solid white;
+    border-radius: 25px;
+}
 
 /* Navigation menu styles. */
 nav
 {
     position: fixed;
     right: 5px;
-    top: 20px;
+    top: 5px;
     z-index: 1;
 
     display: flex;
@@ -37,6 +61,11 @@ nav
     font-size: small;
 
     max-width: 75px;
+
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 100px;
+    padding: 20px 0;
 }
 nav a
 {
@@ -60,4 +89,66 @@ nav img
 {
     width: 20px;
     height: auto;
+}
+
+/* Form styles. */
+form
+{
+    padding: 30px 40px;
+    width: 100%;
+    max-width: 500px;
+}
+fieldset
+{
+    border: 2px solid #6b8cff;
+    border-radius: 15px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+legend
+{
+    font-weight: bold;
+    color: #6b8cff;
+    padding: 0 10px;
+}
+label
+{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+}
+input, select, textarea
+{
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+input:focus, select:focus, textarea:focus
+{
+    border-color: #6b8cff;
+    box-shadow: 0 0 10px #6b8cff55;
+}
+button
+{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #6b8cff, #1a3d8f);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(107, 140, 255, 0.5);
+}
+button:hover
+{
+    box-shadow: 0 6px 20px rgba(107, 140, 255, 0.7);
+    transform: translateY(-2px);
 }
