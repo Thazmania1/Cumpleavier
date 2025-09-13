@@ -2,10 +2,12 @@
 .visibleBorders
 {
     border: 1px solid red;
+    box-sizing: border-box;
 }
 .visibleBorders *
 {
     border: 1px solid red;
+    box-sizing: border-box;
 }
 
 /* Diagonally moving dark space background, similar to the Canva flier. */
@@ -33,4 +35,40 @@
     {
         background-position: 740px 740px;
     }
+}
+
+/* Page navigation menu styles. */
+.pageNav
+{
+    position: fixed;
+    right: 5px;
+    top: 5px;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    text-align: center;
+    font-size: small;
+
+    max-width: 75px;
+
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 100px;
+    padding: 20px 0;
+}
+.pageNav figure
+{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pageNav img
+{
+    width: 20px;
+    height: auto;
 }
