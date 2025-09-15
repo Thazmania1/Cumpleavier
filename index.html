@@ -6,6 +6,7 @@
     <title>Inicio</title>
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/specific.css">
+    <script src="js/nav.js" defer></script>
 
     <style>
         body
@@ -16,18 +17,17 @@
         /* Hero section. */
         #heroFlexbox
         {
-            height: 100vh;
+            height: 100dvh;
             width: 80%;
             margin: 0 auto;
             margin-top: 10px;
 
             display: flex;
-            flex-direction: column;
+            flex-flow: column nowrap;
             align-items: center;
         }
         #heroImage
         {
-            height: 75%;
             width: 75%;
             background-image: url("assets/multimedia/home/xaviHeroVertical.jpeg");
             background-size: cover;
@@ -35,6 +35,7 @@
             background-repeat: no-repeat;
 
             display: flex;
+            flex: 1 0 0;
             flex-direction: column;
             align-items: center;
             justify-content: end;
@@ -59,10 +60,9 @@
         }
         #heroText
         {
-            width: 100%;
-            height: 25%;
-
             display: flex;
+            flex: 0 1 0;
+            width: 100%;
             align-items: center;
             justify-content: center;
         }
@@ -77,6 +77,18 @@
             display: block;
             color: black;
             background-color: yellow;
+        }
+
+        @media (min-width: 600px)
+        {
+            #heroFlexbox
+            {
+                flex-flow: row nowrap;
+            }
+            #heroImage
+            {
+                height: 100%;
+            }
         }
 
         /* Epic fucking button for seemingly no reason. (ChatGPT'd the fuck out of this.) */
@@ -95,17 +107,15 @@
             background-size: 400% 400%;
             box-shadow: 0 0 25px rgba(120, 90, 255, 0.8), 0 0 60px rgba(0, 200, 255, 0.6);
             text-decoration: none;
-            cursor: pointer;
             position: relative;
             overflow: hidden;
-            transition: transform 0.3s ease, 0.3s box-shadow;
+            transition: transform 0.3s ease, 0.3s box-shadow, scale 0.3s ease;
             animation: galaxyShift 10s ease infinite;
             text-align: center;
             margin: 25px 0;
         }
         #changeButton:hover 
         {
-            transform: scale(1.1);
             box-shadow: 0 0 40px rgba(255, 0, 150, 1), 0 0 80px rgba(0, 200, 255, 0.8);
         }
         #changeButton::before {
@@ -154,12 +164,12 @@
                 <figcaption>Redes sociales</figcaption>
             </figure>
         </a>
-        <a href="./contacts.html">
+        <button>
             <figure>
-                <img src="assets/multimedia/navigation/phone_icon.png" alt="Contactos">
-                <figcaption>Contactos</figcaption>
+                <img src="assets/multimedia/navigation/hamburger_icon.png" alt="Abrir/Cerrar">
+                <figcaption>Abrir/Cerrar</figcaption>
             </figure>
-        </a>
+        </button>
     </nav>
 
     <!-- Hero section. -->
@@ -179,7 +189,7 @@
         <p>Aute mollit eu in laborum excepteur ad reprehenderit ea consectetur in labore nostrud.</p>
         <p>Nisi exercitation eiusmod Lorem ex sint voluptate laboris ad.</p>
 
-        <a href="./infoGather.html" id="changeButton">
+        <a href="assets/multimedia/1745506937427.jpg" id="changeButton">
             El cambio comienza hoy
         </a>
     </main>

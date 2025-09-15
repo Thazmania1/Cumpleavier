@@ -6,6 +6,7 @@
     <title>Redes sociales</title>
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/specific.css">
+    <script src="js/nav.js" defer></script>
 
     <style>
         /* Makes it so the user never gets a scroll bar. */
@@ -38,6 +39,7 @@
             justify-content: space-evenly;
             align-items: center;
             text-align: center;
+            gap: 20px;
 
             height: 100%;
         }
@@ -49,11 +51,23 @@
             flex-flow: column nowrap;
             justify-content: center;
             align-items: center;
+            flex: 1 1 0;
         }
         #socialNav > * > *
         {
             width: 100%;
             flex: 0 0 auto;
+        }
+        @media (min-width: 400px)
+        {
+            #socialNav
+            {
+                flex-flow: row nowrap;
+            }
+            #socialNav > *
+            {
+                max-width: 200px;   
+            }
         }
     </style>
 </head>
@@ -80,12 +94,12 @@
                 <figcaption>Redes sociales</figcaption>
             </figure>
         </a>
-        <a href="./contacts.html">
+        <button>
             <figure>
-                <img src="assets/multimedia/navigation/phone_icon.png" alt="Contactos">
-                <figcaption>Contactos</figcaption>
+                <img src="assets/multimedia/navigation/hamburger_icon.png" alt="Abrir/Cerrar">
+                <figcaption>Abrir/Cerrar</figcaption>
             </figure>
-        </a>
+        </button>
     </nav>
 
     <div id="fixedContainerLayout">
